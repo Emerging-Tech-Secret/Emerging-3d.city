@@ -4565,8 +4565,8 @@ const Commercial = {
  */
 
 const animated = [true, false, true, true, false, false, true, true];
-const xDelta = [-1, 0, 1, 0, 0, 0, 0, 1];
-const yDelta = [-1, 0, -1, -1, 0, 0, -1, -1];
+const xDelta$1 = [-1, 0, 1, 0, 0, 0, 0, 1];
+const yDelta$1 = [-1, 0, -1, -1, 0, 0, -1, -1];
 
 const Industrial = {
 
@@ -4621,10 +4621,10 @@ const Industrial = {
         var i = (tileValue - Tile.IZB) >> 3;
 
         if (animated[i] && isPowered) {
-            map.addTileFlags(x + xDelta[i], y + yDelta[i], Tile.ASCBIT);
+            map.addTileFlags(x + xDelta$1[i], y + yDelta$1[i], Tile.ASCBIT);
         } else {
-            map.addTileFlags(x + xDelta[i], y + yDelta[i], Tile.BNCNBIT);
-            map.removeTileFlags(x + xDelta[i], y + yDelta[i], Tile.ANIMBIT);
+            map.addTileFlags(x + xDelta$1[i], y + yDelta$1[i], Tile.BNCNBIT);
+            map.removeTileFlags(x + xDelta$1[i], y + yDelta$1[i], Tile.ANIMBIT);
         }
     },
 
@@ -5012,8 +5012,8 @@ const EmergencyServices = {
 *
 */
 
-const xDelta$1 = [-1,  0,  1,  0 ];
-const yDelta$1 = [ 0, -1,  0,  1 ];
+const xDelta = [-1,  0,  1,  0 ];
+const yDelta = [ 0, -1,  0,  1 ];
 
 
 
@@ -5039,8 +5039,8 @@ const MiscTiles = {
         // Try to set neighbouring tiles on fire as well
         for ( i = 0; i < 4; i++) {
             if (math.getChance(7)) {
-                xTem = x + xDelta$1[i];
-                yTem = y + yDelta$1[i];
+                xTem = x + xDelta[i];
+                yTem = y + yDelta[i];
                 if (map.testBounds(xTem, yTem)) {
                     tile = map.getTile(x, y);
                     if (!tile.isCombustible()) continue;
@@ -8703,3 +8703,4 @@ class MainGame {
 }
 
 export { CityGame, MainGame };
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2l0eWdhbWUubW9kdWxlLmpzIiwic291cmNlcyI6W10sInNvdXJjZXNDb250ZW50IjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9
